@@ -2,107 +2,29 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Forum Knoppen</title>
     <style>
-        /* CSS is nu 'geïsoleerd' met het voorvoegsel "ifb-" om conflicten te voorkomen */
         body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif; }
-        .ifb-container { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 10px;
-            flex-wrap: wrap; 
-            padding: 10px 0; 
-        }
-        .ifb-group { 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-        }
-        .ifb-main-button { 
-            display: inline-block; 
-            background: #800000; 
-            color: #ffffff; 
-            padding: 6px 12px;
-            border-radius: 6px; 
-            text-decoration: none; 
-            font-size: 10pt; 
-            font-weight: 600; 
-        }
-        .ifb-tooltip { 
-            position: relative; 
-        }
-        .ifb-tooltip-trigger { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            width: 20px; 
-            height: 20px; 
-            background-color: #f0f0f0; 
-            color: #555555; 
-            border-radius: 50%; 
-            font-weight: bold; 
-            cursor: help; 
-            font-size: 14px; 
-            border: 1px solid #cccccc; 
-        }
-        .ifb-tooltip-content { 
-            visibility: hidden; 
-            opacity: 0; 
-            width: 240px; 
-            background-color: #333; 
-            color: #fff; 
-            text-align: left; 
-            border-radius: 6px; 
-            padding: 10px; 
-            font-size: 13px; 
-            font-weight: normal; 
-            transition: opacity 0.3s, visibility 0.3s; 
-            position: absolute; 
-            z-index: 9999; 
-            bottom: 150%; 
-            left: 50%; 
-            transform: translateX(-50%); 
-        }
-        .ifb-tooltip-arrow { 
-            content: ''; 
-            position: absolute; 
-            top: 100%; 
-            left: 50%; 
-            transform: translateX(-50%); 
-            border-width: 5px; 
-            border-style: solid; 
-            border-color: #333 transparent transparent transparent; 
-        }
-        .ifb-tooltip:hover .ifb-tooltip-content { 
-            visibility: visible; 
-            opacity: 1; 
-        }
+        .action-buttons-container { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 0; }
+        .button-group { display: flex; align-items: center; gap: 8px; }
+        .main-button { display: inline-block; background: #800000; color: #ffffff; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-size: 10pt; font-weight: 600; }
+        .help-trigger { display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; background-color: #f0f0f0; color: #555555; border-radius: 50%; font-weight: bold; cursor: pointer; font-size: 14px; border: 1px solid #cccccc; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="ifb-container">
-        <div class="ifb-group">
-            <a href="https://www.nederlanders.fr/profiles/blog/new" target="_blank" rel="noopener" class="ifb-main-button">PLAATS BERICHT</a>
-            <div class="ifb-tooltip">
-                <span class="ifb-tooltip-trigger">?</span>
-                <div class="ifb-tooltip-content">Gebruik deze knop om een discussie te starten, een vraag te stellen, een kort verhaal te delen of een mededeling te doen op het algemene forum. We zijn u dankbaar voor uw bericht.<div class="ifb-tooltip-arrow"></div></div>
-            </div>
+    <div class="action-buttons-container">
+        <div class="button-group">
+            <a href="https://www.nederlanders.fr/profiles/blog/new" target="_blank" rel="noopener" class="main-button">PLAATS BERICHT</a>
+            <a href="https://antonnoe.github.io/3knoppen/uitleg-bericht.html" target="_blank" rel="noopener" class="help-trigger">?</a>
         </div>
-        <div class="ifb-group">
-            <a href="https://www.nederlanders.fr/page/betaalpagina-berichten" target="_blank" rel="noopener" class="ifb-main-button">PLAATS ADVERTENTIE</a>
-            <div class="ifb-tooltip">
-                <span class="ifb-tooltip-trigger">?</span>
-                <div class="ifb-tooltip-content">Gebruik deze knop voor commerciële berichten, het aanbieden van producten of diensten, vastgoedadvertenties en vacatures. Voor deze berichten wordt een bijdrage aan de instandhoudingskosten van ons forum gevraagd. We hopen op uw begrip.<div class="ifb-tooltip-arrow"></div></div>
-            </div>
+        <div class="button-group">
+            <a href="https://www.nederlanders.fr/page/betaalpagina-berichten" target="_blank" rel="noopener" class="main-button">PLAATS ADVERTENTIE</a>
+            <a href="https://antonnoe.github.io/3knoppen/uitleg-advertentie.html" target="_blank" rel="noopener" class="help-trigger">?</a>
         </div>
-        <div class="ifb-group">
-            <a href="https://www.nederlanders.fr/page/lift-en-transportcentrale" target="_blank" rel="noopener" class="ifb-main-button">VERVOERSHUB</a>
-            <div class="ifb-tooltip">
-                <span class="ifb-tooltip-trigger">?</span>
-                <div class="ifb-tooltip-content">Welkom bij de Vervoerscentrale van Nederlanders.fr!<br><br>Dit gratis prikbord brengt leden en bezoekers samen voor het delen van ritten of het vervoeren van spullen.<br>Nederlanders.fr is alleen het platform, geen tussenpersoon. Afspraken maakt u rechtstreeks met de andere gebruiker.<br>Wees duidelijk in uw oproep (personen, bagage, kosten).<br>Houd het netjes: communiceer helder, wees op tijd, behandel elkaar met respect.<br>Succes met het vinden van een lift of transport!<div class="ifb-tooltip-arrow"></div></div>
-            </div>
+        <div class="button-group">
+            <a href="https://www.nederlanders.fr/page/lift-en-transportcentrale" target="_blank" rel="noopener" class="main-button">VERVOERSHUB</a>
+            <a href="https://antonnoe.github.io/3knoppen/uitleg-vervoershub.html" target="_blank" rel="noopener" class="help-trigger">?</a>
         </div>
     </div>
 </body>
