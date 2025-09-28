@@ -11,20 +11,25 @@
         .main-button { display: inline-block; background: #800000; color: #ffffff; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-size: 10pt; font-weight: 600; }
         .help-trigger { display: flex; justify-content: center; align-items: center; width: 20px; height: 20px; background-color: #f0f0f0; color: #555555; border-radius: 50%; font-weight: bold; cursor: pointer; font-size: 14px; border: 1px solid #cccccc; text-decoration: none; }
     </style>
+    <script>
+        function openUitleg(url) {
+            window.open(url, 'UitlegVenster', 'width=550,height=350,scrollbars=no,resizable=yes');
+        }
+    </script>
 </head>
 <body>
     <div class="action-buttons-container">
         <div class="button-group">
             <a href="https://www.nederlanders.fr/profiles/blog/new" target="_blank" rel="noopener" class="main-button">PLAATS BERICHT</a>
-            <a href="https://antonnoe.github.io/3knoppen/uitleg-berichten.html" target="_blank" rel="noopener" class="help-trigger">?</a>
+            <a href="javascript:void(0);" onclick="openUitleg('https://antonnoe.github.io/3knoppen/uitleg-berichten.html')" class="help-trigger">?</a>
         </div>
         <div class="button-group">
             <a href="https://www.nederlanders.fr/page/betaalpagina-berichten" target="_blank" rel="noopener" class="main-button">PLAATS ADVERTENTIE</a>
-            <a href="https://antonnoe.github.io/3knoppen/uitleg-advertentie.html" target="_blank" rel="noopener" class="help-trigger">?</a>
+            <a href="javascript:void(0);" onclick="openUitleg('https://antonnoe.github.io/3knoppen/uitleg-advertentie.html')" class="help-trigger">?</a>
         </div>
         <div class="button-group">
             <a href="https://www.nederlanders.fr/page/lift-en-transportcentrale" target="_blank" rel="noopener" class="main-button">VERVOERSHUB</a>
-            <a href="https://antonnoe.github.io/3knoppen/uitleg-vervoershub.html" target="_blank" rel="noopener" class="help-trigger">?</a>
+            <a href="javascript:void(0);" onclick="openUitleg('https://antonnoe.github.io/3knoppen/uitleg-vervoershub.html')" class="help-trigger">?</a>
         </div>
     </div>
 </body>
