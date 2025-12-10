@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Knoppen</title>
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif; }
+        .action-buttons-container { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; padding: 5px 0; }
+        .button-group { display: flex; align-items: center; gap: 6px; }
+
+        /* Aangepast: Lichtere stijl zoals in het voorbeeld */
+        .main-button {
+            display: inline-block;
+            background: #e8e0e0; /* Lichte achtergrondkleur */
+            color: #800000; /* Donkerrode tekstkleur */
+            padding: 4px 8px;
+            border-radius: 8px; /* Iets rondere hoeken */
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            border: 2px solid #800000; /* Donkerrode rand */
+        }
+
+        /* Aangepast: Donkerrode achtergrond en wit vraagteken */
+        .help-trigger {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 18px;
+            height: 18px;
+            background-color: #800000; /* Donkerrode achtergrond */
+            color: #ffffff; /* Wit vraagteken */
+            border-radius: 50%;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 12px;
+            border: none; /* Geen rand nodig */
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function openUitleg(url) {
+            window.open(url, 'UitlegVenster', 'width=550,height=350,scrollbars=no,resizable=yes');
+        }
+    </script>
+</head>
+<body>
+    <div class="action-buttons-container">
+        <div class="button-group">
+            <a href="https://www.nederlanders.fr/profiles/blog/new" target="_blank" rel="noopener" class="main-button">PLAATS BERICHT</a>
+            <a href="javascript:void(0);" onclick="openUitleg('https://antonnoe.github.io/3knoppen/uitleg-berichten.html')" class="help-trigger">?</a>
+        </div>
+        <div class="button-group">
+            <a href="https://www.nederlanders.fr/page/betaalpagina-berichten" target="_blank" rel="noopener" class="main-button">PLAATS ADVERTENTIE</a>
+            <a href="javascript:void(0);" onclick="openUitleg('https://antonnoe.github.io/3knoppen/uitleg-advertentie.html')" class="help-trigger">?</a>
+        </div>
+        <div class="button-group">
+            <a href="https://www.nederlanders.fr/page/lift-en-transportcentrale" target="_blank" rel="noopener" class="main-button">VERVOERSHUB</a>
+            <a href="javascript:void(0);" onclick="openUitleg('https://antonnoe.github.io/3knoppen/uitleg-vervoershub.html')" class="help-trigger">?</a>
+        </div>
+        <div class="button-group">
+            <a href="https://www.infofrankrijk.com" target="_blank" rel="noopener" class="main-button">INFOFRANKRIJK</a>
+            <a href="javascript:void(0);" onclick="openUitleg('https://antonnoe.github.io/3knoppen/uitleg-infofrankrijk.html')" class="help-trigger">?</a>
+        </div>
+    </div>
+</body>
+</html>
